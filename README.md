@@ -13,3 +13,7 @@ After our relentless efforts, we have successfully made this device use TWRP com
 ```text
 Warning:This device tree may only be applicable to ColorOS 15, kernel version 5.10.236 system underlying layer.
 警告 : 此设备树可能仅适用于 ColorOS15，内核版本 5.10.236 的系统底层
+```
+
+感谢：@山轮料叉 和 @是天天吖 的帮助
+也欢迎各位关注我的酷安账号：@Furruka
