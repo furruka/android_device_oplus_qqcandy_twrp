@@ -1,20 +1,67 @@
-**TWRP device tree for OnePlus 10R Lite / OnePlus Ace Race (qqcandy)**
+### TWRP device tree for OnePlus Ace Race / OPPO K10 / OnePlus 10R Lite (QQCandy)
+=========================================
 
-**适用于 一加Ace竞速版 / OnePlus 10R Lite 的 TWRP 设备树**
+[简体中文](README_CN.md)
 
----
+The OnePlus Ace Race (codenamed _"qqcandy"_) is a high-end, mid-range smartphone from OnePlus.
 
-After our relentless efforts, we have successfully made this device use TWRP compiled with the native device tree, which is something to be happy and celebrate.
+It was released in May 2022.
 
-经过我们的不懈努力，终于成功让这台设备吃上了原生设备树编译的TWRP，可喜可贺可喜可贺（
+## Device specifications
 
-***
+Basic   | Spec Sheet
+-------:|:-------------------------
+CPU     | Octa-core CPU with 4x Arm Cortex-A78 up to 2.85GHz
+Chipset | Mediatek Dimensity 8100-MAX
+GPU     | Mali-G610 MC6
+Memory  | 8/12 GB RAM (LPDDR5 6400Mbps)
+Shipped Android Version | 12 with ColorOS 12
+Storage | 128/256 (UFS 3.1)
+Battery | Non-removable Li-Po 5000 mAh battery
+Display | 1080 x 2412 pixels, 6.59 inches, 30/45/60/75/90/120Hz, LTPS LCD
 
-```text
-Warning:This device tree may only be applicable to ColorOS 15, kernel version 5.10.236 system underlying layer.
-警告 : 此设备树可能仅适用于 ColorOS15，内核版本 5.10.236 的系统底层
+![OnePlus Ace Race](https://oasisstatics.oneplus.cn/content/dam/oasis/page/2022/operation/may/cn/540x540-grey.png)
+
+## Features
+
+Works:
+
+- [X] ADB
+- [X] Decryption (Android 15)
+- [X] Display
+- [X] Fasbootd
+- [X] Flashing
+- [X] MTP
+- [X] Sideload
+- [X] USB OTG
+- [X] Vibrator
+- [X] Touch
+
+## Compile
+
+First checkout minimal twrp with aosp tree:
+
+```
+repo init --depth=1 -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
+repo sync -j$(nproc --all)
 ```
 
-感谢：@山轮料叉 和 @是天天吖 的帮助
+Then add these projects to .repo/manifest.xml:
 
-也欢迎各位关注我的酷安账号：@Furruka
+```xml
+<project path="device/oneplus/qqcandy" name="furruka/android_device_oplus_qqcandy_twrp" remote="github" revision="a14" />
+```
+
+Finally execute these:
+
+```
+source build/envsetup.sh
+repopick <needed patch>
+lunch twrp_qqcandy-eng
+mka vendorbootimage -j$(nproc --all)
+```
+## To use it:
+
+```
+fastboot flash vendor_boot out/target/product/qqcandy/vendor_boot.img
+```
