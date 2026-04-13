@@ -16,6 +16,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),mt6895)
+ifeq ($(TARGET_DEVICE),qqcandy)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif
