@@ -177,7 +177,7 @@ TW_INCLUDE_LPTOOLS := true
 # TW_SUPPORT_INPUT_AIDL_HAPTICS_FIX_OFF := true
 
 # Indicator
-TW_CUSTOM_CPU_TEMP_PATH := /sys/class/thermal/thermal_zone0/temp
+TW_CUSTOM_CPU_TEMP_PATH := /sys/class/power_supply/battery/temp
 TW_Y_OFFSET := 118
 TW_H_OFFSET := -118
 TW_BATTERY_SYSFS_WAIT_SECONDS := 6
@@ -193,7 +193,7 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_DEFAULT_BRIGHTNESS := 1000
 TW_MAX_BRIGHTNESS := 4097
 TW_DEVICE_VERSION := qqcandy
-MAINTAINER := Furruka | mytiantian
+MAINTAINER := Furruka | mytiantian001
 TW_EXCLUDE_APEX := true
 TW_EXTRA_LANGUAGES := true
 TW_INCLUDE_NTFS_3G := true
