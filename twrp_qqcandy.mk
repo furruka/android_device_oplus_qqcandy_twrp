@@ -19,6 +19,8 @@ DEVICE_PATH := device/oplus/qqcandy
 # Inherit from OPLUS qqcandy device
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
+$(call inherit-product, $(DEVICE_PATH)/OrangeFox.mk)
+
 # Device identifier
 PRODUCT_DEVICE := qqcandy
 PRODUCT_NAME := twrp_qqcandy
