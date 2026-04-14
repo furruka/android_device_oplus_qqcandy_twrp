@@ -108,7 +108,7 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 
 # Platform
-TARGET_BOARD_PLATFORM := OnePlus Ace Race
+TARGET_BOARD_PLATFORM := mt6895
 
 # Resolution
 TARGET_SCREEN_HEIGHT := 2412
@@ -170,12 +170,6 @@ TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_LPDUMP := true
 TW_INCLUDE_LPTOOLS := true
 
-# # Haptic
-# TW_LOAD_VENDOR_MODULES := "haptic.ko"
-# TW_SUPPORT_INPUT_AIDL_HAPTICS := true
-# TW_SUPPORT_INPUT_AIDL_HAPTICS_FQNAME := "IVibrator/vibratorfeature"
-# TW_SUPPORT_INPUT_AIDL_HAPTICS_FIX_OFF := true
-
 # Indicator
 TW_CUSTOM_CPU_TEMP_PATH := /sys/class/power_supply/battery/temp
 TW_Y_OFFSET := 118
@@ -202,7 +196,6 @@ TW_INCLUDE_FASTBOOTD := true
 TW_INCLUDE_FUSE_EXFAT := true
 RECOVERY_SDCARD_ON_DATA := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
-# Avoid repeated pre-decrypt /data mount attempts on encrypted devices.
 TW_PREPARE_DATA_MEDIA_EARLY := false
 TW_USE_NEW_MINADBD := true
 TW_EXCLUDE_APEX := true
@@ -210,9 +203,11 @@ TW_NO_LEGACY_PROPS := true
 TW_NO_BIND_SYSTEM := true
 TW_BACKUP_EXCLUSIONS := /data/fonts
 TW_USE_SERIALNO_PROPERTY_FOR_DEVICE_ID := true
+
+# USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
 
-# Boot control - use MTK custom library directly in recovery binary
+# Boot control
 # This bypasses the HAL service dependency for TWRP's own slot management
 BOARD_BOOTCTRL_LIBRARY := android.hardware.boot@1.2-mtkimpl
 
