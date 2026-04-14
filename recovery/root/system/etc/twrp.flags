@@ -17,7 +17,6 @@
 
 /persist_image      emmc      /dev/block/by-name/persist                                            flags=display="persist";backup=1;flashimg=1
 
-/rescue             ext4      /dev/block/by-name/rescue                                             flags=display="rescue"
 /protect_f          ext4      /dev/block/by-name/protect1                                           flags=display="protect_f"
 /protect_s          ext4      /dev/block/by-name/protect2                                           flags=display="protect_s"
 /nvdata             ext4      /dev/block/by-name/nvdata                                             flags=display="nvdata"
