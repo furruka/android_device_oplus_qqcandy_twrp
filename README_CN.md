@@ -17,7 +17,7 @@ GPU     | Mali-G610 MC6
 屏幕类型 | LTPS LCD屏幕
 
 <p align="center">
-  <img src="https://oasisstatics.oneplus.cn/content/dam/oasis/page/2022/operation/may/cn/540x540-grey.png" width="243">
+  <img src="https://oasisstatics.oneplus.cn/content/dam/oasis/page/2022/operation/may/cn/540x540-grey.png">
 </p>
 
 正常工作的:
