@@ -25,5 +25,5 @@ ro.hardware.gatekeeper=trustonic
 ro.twrp.vendor_boot=true
 
 # Platform
-ro.vendor.mediatek.platform=OnePlus Ace Race
-ro.hardware=OnePlus Ace Race
+ro.vendor.mediatek.platform=mt6895
+ro.hardware=mt6895
