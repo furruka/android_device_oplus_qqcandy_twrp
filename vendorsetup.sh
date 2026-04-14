@@ -13,3 +13,23 @@ export OF_NO_REFLASH_CURRENT_ORANGEFOX=1
 # Hide flashlight UI entry on this device: kernel exposes MTK flashlight_core
 # multi-argument interface, which is not compatible with TWRP single-node torch.
 export OF_FLASHLIGHT_ENABLE=0
+
+export FOX_VIRTUAL_AB_DEVICE=1
+export FOX_ENABLE_APP_MANAGER=1
+export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
+export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
+export FOX_USE_BASH_SHELL=1
+export FOX_ASH_IS_BASH=1
+export FOX_USE_TAR_BINARY=1
+export FOX_USE_LZ4_BINARY=1
+export FOX_USE_SED_BINARY=1
+export FOX_USE_XZ_UTILS=1
+export FOX_USE_ZSTD_BINARY=1
+export FOX_USE_NANO_EDITOR=1
+export FOX_USE_UPDATED_MAGISKBOOT=1
+export FOX_USE_DATE_BINARY=1
+export FOX_TARGET_DEVICES=qqcandy
+export TARGET_DEVICE_ALT=qqcandy
+export FOX_INSTALLER_DISABLE_AUTOREBOOT=1
+export FOX_DELETE_AROMAFM=1
+export FOX_VARIANT="c15"
