@@ -1,5 +1,5 @@
 #
-# OrangeFox Recovery build variables for qqcandy (OnePlus Ace Race / mt6895)
+# OrangeFox Recovery build variables for qqcandy (OnePlus Ace Race)
 #
 
 FOX_VARIANT := c15
@@ -31,3 +31,10 @@ FOX_USE_DATE_BINARY := 1
 
 FOX_TARGET_DEVICES := qqcandy
 TARGET_DEVICE_ALT := qqcandy
+
+# Notch / punch-hole camera (top-left, 150x118px)
+OF_SCREEN_H := 2412
+OF_STATUS_H := 118
+OF_STATUS_INDENT_LEFT := 150
+OF_STATUS_INDENT_RIGHT := 48
+OF_CLOCK_POS := 0
