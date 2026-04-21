@@ -27,7 +27,7 @@ GPU     | Mali-G610 MC6
 - [X] Fasbootd模式
 - [X] 卡刷模式
 - [X] MTP文件传输
-- [] Sideload侧载刷入
+- [X] Sideload侧载刷入
 - [X] USB OTG功能
 - [X] 震动
 - [X] 触摸
